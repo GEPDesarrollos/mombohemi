@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MON BOHEMI-Irish Pub</title>
+	<link rel="shortcut icon" href="img/logo-chico.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+	<nav>
+		<div class="titulo">
+		<h1>MON BOHEMI</h1>
+		<h2>IRIS-PUB</h2>
+		</div>
+		<div class="menu">
+		<label for="cerrar" class="abrir_menu">
+		<img src="img/menu-chico.png" alt="menu">
+		</label>	
+		</div>
+	</nav>
+		<input type="checkbox" id="cerrar">
+	<div class="menu_desplegable">
+		<label for="cerrar"><img src="img/x_cerrar 1.png" alt="cerrar menu"></label>
+		<label for="cerrar">
+			
+		<ul>
+			<li><a href="index.html">home</a></li>
+			<li><a href="eventos_.html">eventos</a></li>
+			<li><a href="galeria.html">galería</a></li>
+			<li><a href="#">reservas</a></li>
+			<li><a href="https://www.instagram.com/monbohemiok/" target="_blanck">instagram</a></li>
+			<li><a target="_blanck" href="https://www.facebook.com/Mon-Bohemi-1243677552340618">facebook</a></li>			
+		</ul>
+		</label>
+	</div>
+	<div class="encabezado">
+		<h1>Reservas</h1>
+	</div>
+	<div class="contenedor">
+		<h1>Contacto</h1>
+		<form action="" id="basic-form">
+			<br>
+			<label for="nombre">Nombre y apellido: </label><br>
+			<input type="text" name="nombre" id="nombre" required="true"><br>
+			<label for="mail">E-mail:</label> <br> 
+			<input type="email" required="true" id="mail" name="mail"><br>
+			<label for="telefono">Teléfono</label><br>
+			<input type="text" required="true" name="telefono" id="telefono"><br>
+			<label for="personas">Cantidad de personas:</label><br>
+			<input type="number" name="personas" required="true" id="personas"><br>
+			<label for="fecha">Fecha:</label><br>	
+			<input type="date" required="true" id="fecha" name="fecha"><br>
+			<label for="obs">Observaciones:</label><br>
+			<textarea name="obs" id="obs" cols="32" rows="10"></textarea><br><br>
+			<input type="submit" value="ENVIAR" id="boton">
+
+		</form>
+
+	</div>
+	<div id="fondo">
+		<div class="cartel">
+			<h1>¡Gracias por contactarnos!</h1>
+			<p>En breve recibirás noticias nuestras.</p>
+		</div>
+		
+	</div>
+	
+	<footer>
+		<p class="by">by GEP WebDesign</p>		
+		<ul>
+			<li><a href="https://www.facebook.com/Mon-Bohemi-1243677552340618" target="_blanck"><img src="img/facebook-grande.png" alt="facebook"></a></li>
+			<li><a href="https://www.instagram.com/monbohemiok/" target="_blanck"><img src="img/instagram-grande.png" alt="instagram"></a></li>
+		</ul>	
+	</footer>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			/* body... */
+
+
+		jQuery.validator.messages.required = 'Este campo es obligatorio.';
+   		jQuery.validator.messages.number = 'Este campo debe ser num&eacute;rico.';
+   		jQuery.validator.messages.email = 'La direcci&oacute;n de correo es incorrecta.';
+
+
+		$("#basic-form").validate({
+		  submitHandler: function(form) {
+    		// do other things for a valid form
+			console.log('estoty en handleEvent');
+
+			$("#fondo").fadeIn();
+
+			setInterval(function () {
+			/* body... */
+			$("#fondo").fadeOut();
+   			 form.submit();
+			},3000);
+	
+
+  			}
+		});
+
+
+		
+		
+
+		});
+
+	</script>	
+</body>
+</html>

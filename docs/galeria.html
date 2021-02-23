@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MON BOHEMI-Irish Pub</title>
+	<link rel="shortcut icon" href="img/logo-chico.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+	<nav>
+		<div class="titulo">
+		<h1>MON BOHEMI</h1>
+		<h2>IRIS-PUB</h2>
+		</div>
+		<div class="menu">
+		<label for="cerrar" class="abrir_menu">
+		<img src="img/menu-chico.png" alt="menu">
+		</label>	
+		</div>
+	</nav>
+		<input type="checkbox" id="cerrar">
+	<div class="menu_desplegable">
+		<label for="cerrar"><img src="img/x_cerrar 1.png" alt="cerrar menu"></label>
+		<label for="cerrar">
+			
+		<ul>
+			<li><a href="index.html">home</a></li>
+			<li><a href="eventos_.html">eventos</a></li>
+			<li><a href="#">galería</a></li>
+			<li><a href="reservas.html">reservas</a></li>
+			<li><a href="https://www.instagram.com/monbohemiok/" target="_blanck">instagram</a></li>
+			<li><a target="_blanck" href="https://www.facebook.com/Mon-Bohemi-1243677552340618">facebook</a></li>			
+		</ul>
+		</label>
+	</div>
+	<div class="encabezado">
+		<h1>Galería</h1>
+	</div>
+	<div id="fondo">
+		<div>
+			<img src="" id="imgfull" alt="">
+		</div>
+		
+	</div>
+
+
+	<div class="galeria">
+		<img srcset="img/fotoGaleria1-chico.png 110w,
+		img/fotoGaleria1-grande.png 300w" sizes="(max-width: 600px) 110px, 300px"  alt="fotoGaleria1">
+		<img srcset="img/fotoGaleria2-chico.png 110w,
+		img/fotoGaleria2-grande.png 300w" sizes="(max-width: 600px) 110px, 300px"  alt="fotoGaleria2">
+		<img srcset="img/fotoGaleria3-chico.png 110w,
+		img/fotoGaleria3-grande.png 300w" sizes="(max-width: 600px) 110px, 300px"  alt="fotoGaleria3">
+		<img srcset="img/fotoGaleria4-chico.png 110w,
+		img/fotoGaleria4-grande.png 300w" sizes="(max-width: 600px) 110px, 300px"  alt="fotoGaleria4">
+		<img srcset="img/fotoGaleria5-chico.png 110w,
+		img/fotoGaleria5-grande.png 300w" sizes="(max-width: 600px) 110px, 300px"  alt="fotoGaleria5">
+		<img srcset="img/fotoGaleria6-chico.png 110w,
+		img/fotoGaleria6-grande.png 300w" sizes="(max-width: 600px) 110px, 300px"  alt="fotoGaleria6">
+
+
+	</div>
+	<footer>
+		<p class="by">by GEP WebDesign</p>		
+		<ul>
+			<li><a href="https://www.facebook.com/Mon-Bohemi-1243677552340618" target="_blanck"><img src="img/facebook-grande.png" alt="facebook"></a></li>
+			<li><a href="https://www.instagram.com/monbohemiok/" target="_blanck"><img src="img/instagram-grande.png" alt="instagram"></a></li>
+		</ul>	
+	</footer>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		
+		$(document).ready (
+
+
+		function () {
+			// body... 
+			$(".galeria img").on ("click", abrir);
+			$("#imgfull").on ("click", cerrar);
+		});
+
+		function abrir () {
+			/* body... */
+			var nombre = $(this).attr("alt")+"-grande.png";
+			var direccion = "img/" + nombre;
+			console.log(direccion);
+			$("#fondo").show();
+			$("#imgfull").attr("src" , direccion );
+
+		}
+
+		function cerrar () {
+			/* body... */
+			//$("#imgfull").hide();
+			$("#fondo").hide();
+
+		}
+	</script>
+	
+</body>
+</html>
